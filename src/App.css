@@ -10,7 +10,6 @@
 /* 배경 */
 body {
     min-height: 100vh;
-    padding: 0 16px;
     background: linear-gradient(135deg, #98b8ff 0%, #60a5fa 100%);
 }
 

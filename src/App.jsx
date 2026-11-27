@@ -74,7 +74,7 @@ function App() {
         </div>
         <div className="chips">
           {CITIES.map((name) => (
-            <button key={name}>{name}</button>
+            <button key={name} onClick={()=>searchCity(name)}>{name}</button>
           ))}
         </div>
         {err && <p className='error'>{err}</p>}
