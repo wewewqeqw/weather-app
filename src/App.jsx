@@ -20,7 +20,7 @@ function App() {
     if (!q) return
 
     try {
-      setLoading(false)
+      setLoading(true)
       setErr('')
 
 
@@ -28,7 +28,7 @@ function App() {
 
       const data = await fetchWeatherByCoords(lat, lon)
 
-      setWeather(...data, cityName)
+      setWeather({...data, cityName})
       setCity('')
 
     } catch (error) {
@@ -78,7 +78,7 @@ function App() {
           ))}
         </div>
         {err && <p className='error'>{err}</p>}
-        loading && <p className='info'>불러오는 중...</p>
+       { loading && <p className='info'>불러오는 중...</p>}
         <WeatherCard weather={weather}/>
       </div>
     </section>

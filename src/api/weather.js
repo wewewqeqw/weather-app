@@ -11,5 +11,5 @@ export const fetchWeatherByCoords = async (lat, lon) => {
             appid:API_KEY
         }
     })
-    return res
+    return res.data
 }
