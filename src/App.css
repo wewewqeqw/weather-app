@@ -1,0 +1,118 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spoqa Han Sans Neo', sans-serif;
+}
+
+/* 배경 */
+body {
+    min-height: 100vh;
+    padding: 0 16px;
+    background: linear-gradient(135deg, #98b8ff 0%, #60a5fa 100%);
+}
+
+/* 날씨별 배경을 얹을 때 쓸 자리 (추가실습) */
+section {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 40px 16px;
+    transition: background .4s ease;
+}
+
+/* 유리 카드 */
+.app {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 28px 24px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .55);
+    border: 1px solid rgba(255, 255, 255, .7);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 40px rgba(30, 60, 120, .25);
+    color: #1e293b;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* 알약 모양 검색창 */
+.input-wrap {
+    display: flex;
+    padding: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .9);
+}
+
+.input-wrap input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0 14px;
+    font-size: 15px;
+    color: #222;
+}
+
+.input-wrap button {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 18px;
+    background: #1e293b;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform .15s;
+}
+
+.input-wrap button:hover {
+    transform: scale(1.05);
+}
+
+.input-wrap button[disabled] {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+/* 에러·로딩 문구 (App.jsx 기능구현에서 사용) */
+.error {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.info {
+    margin-top: 12px;
+    opacity: .85;
+}
+
+/* 4) 도시 버튼(칩) */
+.chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.chips button {
+    border: 1px solid rgba(30, 41, 59, .15);
+    background: rgba(255, 255, 255, .5);
+    color: #1e293b;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.chips button:hover {
+    background: #fff;
+}

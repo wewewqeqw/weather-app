@@ -1,0 +1,64 @@
+.card {
+    text-align: center;
+    padding: 28px 0 4px;
+    animation: fadeUp .5s ease;
+}
+.card h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* 아이콘 */
+.card .img-wrap {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+}
+.card .img-wrap img {
+    width: 100%;
+    filter: drop-shadow(0 8px 16px rgba(30, 60, 120, .35));
+}
+
+
+/* 온도·설명 */
+.card .temp {
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.card .desc {
+    font-size: 18px;
+    margin-top: 6px;
+    opacity: .9;
+}
+
+/* 상세 정보 3칸 */
+.meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.meta div {
+    padding: 12px 6px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .6);
+}
+
+.meta span {
+    display: block;
+    font-size: 12px;
+    opacity: .8;
+}
+
+.meta strong {
+    font-size: 18px;
+    font-weight: 700;
+}
+/* 등장 애니메이션 */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+}
